@@ -45,10 +45,10 @@ st.title("⏱️ GE multi-PLD ASL timing parameters")
 st.markdown("""
 Multi-PLD ASL are acquired using time-encoded method. 
 Upon successful scanning, the system automatically generates decoded RAW images 
-(with sequence numbers calculated as the original scanning sequence numbers multiplied by 100).
+(with series number calculated as the original scanning series number multiplied by 100).
 This RAW images contains multiple 3D images in the following order:
 
-- Perfusion-weighted images for each individual PLD (with specific Post-Labeling Delay values calculated by this program)
+- Perfusion-weighted images for each individual PLD (with specific LD & PLD values calculated by this program)
 - A combined perfusion-weighted image (uses the entire label duration, CV5, and the shortest post label delay, CV4)
 - Reference images
 
