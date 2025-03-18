@@ -54,10 +54,10 @@ This RAW images contains multiple 3D images in the following order:
 
 """)
 st.markdown("---")
-cv4 = st.number_input("CV4: (e.g. 1000)", value=1000)
-cv5 = st.number_input("CV5: (e.g. 3500)", value=3500)
-cv6 = st.selectbox("CV6: (e.g. 7)", options=[3, 7])
-cv7 = st.number_input("CV7: (e.g. 0.5)", value=0.5)
+cv4 = st.number_input("CV4: Post label delay time (e.g. 1000; minimum: 700; maximum 4000)", value=1000)
+cv5 = st.number_input("CV5: Perfusion labeling time (e.g. 3500; minimum: 0; maximum 4000)", value=3500)
+cv6 = st.selectbox("CV6: Number of post label delay images to acquire (e.g. 7)", options=[3, 7])
+cv7 = st.number_input("CV7: Delay linearity (e.g. 0.5; minimum: 0.0; maximum: 1.0)", value=0.5)
 
 if st.button("🚀 calculate"):
     try:
