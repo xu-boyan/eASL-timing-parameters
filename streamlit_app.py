@@ -42,6 +42,17 @@ def ge_asl_pld(cv4, cv5, cv6, cv7):
 
 
 st.title("⏱️ GE multi-PLD ASL timing parameters")
+st.markdown("""
+Multi-PLD ASL are acquired using time-encoded method. 
+Upon successful scanning, the system automatically generates decoded RAW images 
+(with sequence numbers calculated as the original scanning sequence numbers multiplied by 100).
+This RAW images contains multiple 3D images in the following order:
+
+- Perfusion-weighted images for each individual PLD (with specific Post-Labeling Delay values calculated by this program)
+- A combined perfusion-weighted image (uses the entire label duration, CV5, and the shortest post label delay, CV4)
+- Reference images
+
+""")
 st.markdown("---")
 cv4 = st.number_input("CV4: (e.g. 1000)", value=1000)
 cv5 = st.number_input("CV5: (e.g. 3500)", value=3500)
